@@ -15,10 +15,10 @@ let nome = "";
 
 function traduzir(cod) {
 if  (cod == "p1") {
-    nome = "Porta";
+    nome = "Mesa";
 }
 if  (cod == "p2") {
-    nome = "Mesa";
+    nome = "Cadeira";
 }
 if  (cod == "p3") {
     nome = "Cama";
@@ -27,7 +27,7 @@ return nome;
 }
 
 function atualizarCarrinho() {
-    itens.innerHTML = '<h1>Carrinho</h1>';
+    itens.innerHTML = '';
     saldotxt.textContent = `Saldo: R$ ${saldo},00`;
     valortxt.textContent = `Total: R$ ${total},00`;
     const lista = document.createElement('ul');
@@ -46,10 +46,6 @@ function atualizarCarrinho() {
     if (temItens) {
         itens.appendChild(lista);
 
-    } else {
-        const vazio = document.createElement('p');
-        vazio.textContent = 'Carrinho vazio';
-        itens.appendChild(vazio);
     }
     return temItens;
 }
@@ -77,10 +73,11 @@ finalizar.addEventListener("click", function() {
     }
     else {
         if (total > saldo) {
-            msg.textContent = "SEM SALDO POBRE"
+            msg.textContent = "SALDO INSUFICIENTE"
         }
         if (total <= saldo) {
             msg.textContent = "Comprado";
+            itens.innerHTML = '<h1>Comprado com sucesso.</h1>';
             carrinho = {p1: 0, p2: 0, p3: 0};
             saldo = saldo - total;
             total = 0;
@@ -100,6 +97,6 @@ fecha.addEventListener("click", () => {
 })
 
 abrecarro.addEventListener("click", () => {
-    divcarrinho.style.display = 'block';
+    divcarrinho.style.display = 'flex';
 })
 

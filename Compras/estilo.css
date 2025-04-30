@@ -76,12 +76,29 @@ header {
   z-index: 1;
 }
 
+.adicionar {
+  border-radius: 20px;
+  width: 100px;
+  height: 50px;
+}
+
 .produto {
+  padding: 20px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 300px;
   background-color: rgb(230, 230, 230);
   border: 2px solid rgb(192, 192, 192);
   border-radius: 30px;
   height: 500px;
+}
+
+.produto img {
+  width: 300px;
+  max-height: 350px;
+  border: 1px solid black;
 }
 
 ul {
@@ -96,15 +113,17 @@ ul {
 
 .carrinhobox {
   display: none;
+  flex-direction: column;
   width: 400px;
   height: 400px;
-  background-color: red;
+  background-color: rgb(255, 157, 0);
   position: fixed;
   z-index: 9999;
   right: 15px;
   top: 15px;
   border-radius: 30px;
   padding: 10px;
+  border: 2px solid rgba(113, 113, 113, 0.507);
 }
 
 #fechar {
@@ -121,4 +140,26 @@ ul {
   margin: 0px;
   transform: rotate(45deg);
   cursor: pointer;
+}
+
+.itens {
+  width: 100%;
+  font-size: 20px;
+}
+
+#limpa {
+  border-radius: 10px;
+  width: 100px;
+  height: 40px;
+}
+
+.final {
+  position: fixed;
+  top: 300px;
+}
+
+#comprar {
+  position: fixed;
+  right: 70px;
+  top: 330px;
 }
