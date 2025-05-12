@@ -1,0 +1,170 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html, body {
+    font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#conteudologin {
+  gap: 20px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  z-index: 999;
+  flex-direction: column;
+}
+
+#loginbox {
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  font-size: 25px;
+  gap: 30px;
+}
+
+#titulo {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: rgb(135, 135, 135);
+  font-size: 30px;
+}
+
+#titulo2 {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+#nome {
+  padding-left: 10px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: white;
+  width: 300px;
+}
+
+#nome::placeholder {
+  font-size: 20px;
+  color: red;
+}
+
+#pontuar {
+  height: 50px;
+  border-radius: 20px;
+  width: 400px;
+  transition: .5s;
+  font-size: 45px;
+}
+
+button {
+  background-color: white;
+  border-radius: 10px;
+  width: 100px;
+  height: 30px;
+  cursor:pointer;
+  border: 1px solid black;
+}
+
+#entrar:hover {
+  background-color: gray;
+}
+
+#principal {
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+#conteudo {
+  flex-direction: column;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  z-index: 1;
+}
+
+.hamburg {
+  position: absolute;
+  width: 80px;
+  pointer-events: none;
+  opacity: 1;
+  transition: transform 1s ease-out, opacity 1s ease-out .5s;
+  height: 40px;
+  z-index: 9999;
+  }
+
+#post {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+}
